@@ -123,8 +123,8 @@ export default function Navbar() {
       }`}
     >
       <nav
-        className={`mx-auto flex max-w-7xl items-center justify-between px-6 transition-all duration-500 ${
-          scrolled ? "h-16" : "h-20"
+        className={`mx-auto flex container items-center justify-between  transition-all duration-500 ${
+          scrolled ? "h-20" : "h-30"
         }`}
       >
         {/* Logo */}
@@ -159,7 +159,7 @@ export default function Navbar() {
               <a
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
-                className="text-sm font-medium text-[var(--color-text-muted)] transition-colors duration-300 hover:text-[var(--color-text)]"
+                className="text-md font-medium text-[var(--color-text-muted)] transition-colors duration-300 hover:text-[var(--color-text)]"
               >
                 {link.name}
               </a>

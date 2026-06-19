@@ -131,16 +131,16 @@ export default function Hero() {
       </div>
 
       {/* Wider Container */}
-      <div className="relative z-10 mx-auto grid w-full max-w-7xl items-center gap-20 md:grid-cols-[1.3fr_1fr]">
+      <div className="relative z-10 mx-auto  container items-center gap-20 md:grid-cols-[1.3fr_1fr]">
         {/* LEFT CONTENT */}
-        <div>
+        <div className="max-w-5xl">
           <p className="hero-eyebrow mb-6 text-sm tracking-[0.3em] text-[var(--color-text-muted)] uppercase">
             Website Developer
           </p>
 
           <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
             <span className="hero-line block text-[var(--color-text)]">
-              Hi, I'm Syed Waqar Abbas —
+              Hi, I'm  Waqar Abbas —
             </span>
             <span className="hero-line block bg-gradient-to-r from-indigo-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent">
               I build high-converting websites
@@ -186,19 +186,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* RIGHT LOGO CARD */}
-        <div className="hero-mark relative mx-auto hidden md:block">
-          <div
-            className="relative flex h-80 w-80 items-center justify-center rounded-[var(--radius-lg)] border border-[var(--color-border)] bg-[var(--color-card)] backdrop-blur-xl transition-transform hover:scale-105"
-            style={{ boxShadow: "var(--shadow-glow)" }}
-          >
-            <img
-              src={logo}
-              alt="Byteworm logo"
-              className="h-48 w-auto drop-shadow-2xl"
-            />
-          </div>
-        </div>
+
       </div>
     </section>
   );
