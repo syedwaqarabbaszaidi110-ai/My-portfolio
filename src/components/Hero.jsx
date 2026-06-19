@@ -3,13 +3,14 @@ import { gsap } from "gsap";
 import { ArrowRight, FileDown } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import logo from "../assets/logo.png";
+import cv from "../assets/Cv.pdf";
 
 // 1) Sign up free at https://www.emailjs.com
 // 2) Create an Email Service + Email Template (template should use {{message}} variable)
 // 3) Paste your IDs below
 const EMAILJS_SERVICE_ID = "service_zce854n";
 const EMAILJS_TEMPLATE_ID = "template_sf7xw6c";
-const EMAILJS_PUBLIC_KEY = "lT8yK9k5-knQblS78";
+const EMAILJS_PUBLIC_KEY = "_04W05urr7LAwVrw4";
 
 export default function Hero() {
   const handleResumeDownload = () => {
@@ -175,7 +176,7 @@ export default function Hero() {
             </a>
 
             <a
-              href="/assets/cv.pdf"
+              href={cv}
               download="Syed-Waqar-Abbas-CV.pdf"
               onClick={handleResumeDownload}
               className="hero-cta btn-ghost flex items-center gap-2"

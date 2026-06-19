@@ -5,6 +5,7 @@ import gsap from "gsap";
 import ThemeToggle from "./ThemeToggle";
 import logo from "../assets/logo.png";
 
+
 const navLinks = [
   { name: "Home", href: "#hero" },
   { name: "About", href: "#about" },
@@ -12,7 +13,6 @@ const navLinks = [
   { name: "Contact", href: "#contact" },
 ];
 
-// +92 370 8970508 -> international format without spaces/plus for wa.me
 const WHATSAPP_NUMBER = "923708970508";
 const WHATSAPP_MESSAGE =
   "Hi Waqar! I came across your portfolio and would like to talk about a project.";
