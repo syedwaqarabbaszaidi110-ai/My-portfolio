@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* Brand — pulled from the logo's blue → violet → cyan sweep */
+  --color-accent-blue: #4f6df5;
+  --color-primary: #7c3aed;
+  --color-primary-light: #a855f7;
+  --color-secondary: #06b6d4;
+
+  --color-bg: #0a0e1a;
+  --color-surface: #111624;
+  --color-card: #171d30;
+  --color-card-hover: #1d2438;
+
+  --color-text: #f5f7ff;
+  --color-text-muted: #8d94ab;
+
+  --color-border: #232a40;
+  --color-code-bg: #0d1120;
+
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+
+  --shadow:
+    rgba(0, 0, 0, 0.45) 0 10px 30px -10px, rgba(0, 0, 0, 0.3) 0 4px 6px -2px;
+  --shadow-glow: 0 0 60px -10px rgba(124, 58, 237, 0.35);
+
+  --gradient-primary: linear-gradient(
+    120deg,
+    var(--color-accent-blue) 0%,
+    var(--color-primary) 55%,
+    var(--color-secondary) 100%
+  );
+  --gradient-text: linear-gradient(
+    100deg,
+    var(--color-accent-blue),
+    var(--color-primary-light) 50%,
+    var(--color-secondary)
+  );
+
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Light Theme */
+[data-theme="light"] {
+  --color-bg: #f8f9fd;
+  --color-surface: #ffffff;
+  --color-card: #ffffff;
+  --color-card-hover: #f1f3fb;
+
+  --color-text: #0c1024;
+  --color-text-muted: #5b6178;
+
+  --color-border: #e3e6f2;
+  --color-code-bg: #eef0f9;
+
+  --shadow:
+    rgba(15, 23, 42, 0.08) 0 10px 30px -10px,
+    rgba(15, 23, 42, 0.05) 0 4px 6px -2px;
+  --shadow-glow: 0 0 60px -10px rgba(124, 58, 237, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-text);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+#root {
+  overflow-x: hidden;
+}
+
+code {
+  font-family: var(--font-mono);
+  background: var(--color-code-bg);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--color-text);
+  margin: 0;
+}
+
+::selection {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+a {
+  color: inherit;
+}
+
+/* scrollbar, kept subtle */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--color-bg); }
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 10px;
+}
