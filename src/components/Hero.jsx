@@ -2,8 +2,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ArrowRight, FileDown } from "lucide-react";
 import emailjs from "@emailjs/browser";
-import logo from "../assets/logo.png";
-import cv from "../assets/Cv.pdf";
+import cv from "../../public/assets/cv.pdf";
 
 // 1) Sign up free at https://www.emailjs.com
 // 2) Create an Email Service + Email Template (template should use {{message}} variable)

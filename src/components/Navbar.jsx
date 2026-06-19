@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Menu, X, MessageCircle } from "lucide-react";
 import gsap from "gsap";
 import ThemeToggle from "./ThemeToggle";
-import logo from "../assets/logo.png";
+import logo from "../../public/assets/logo.png";
 
 
 const navLinks = [
