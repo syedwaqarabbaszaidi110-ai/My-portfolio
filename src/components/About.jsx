@@ -62,7 +62,7 @@ export default function About() {
     <section id="about" ref={root} className="relative">
       <SectionDivider />
 
-      <div className="mx-auto mt-16 container grid items-center gap-16 md:grid-cols-2 px-4 pt-12 md:pt-20 lg:pt-28">
+      <div className="mx-auto mt-16 container grid items-center gap-6 md:gap-14 lg:gap-16 md:grid-cols-2 px-4 pt-12 md:pt-20 lg:pt-28">
         <div className="">
           <p className="about-reveal eyebrow mb-5">About Me </p>
           <h2 className="about-reveal font-display text-3xl font-bold leading-tight md:text-4xl">
@@ -81,7 +81,7 @@ export default function About() {
             client to actually use.
           </p>
 
-          <div className="about-reveal mt-8 flex flex-wrap gap-3">
+          <div className="about-reveal mt-8 mb-2 sm:mb-10 flex flex-wrap gap-3">
             {skills.map((skill) => (
               <span
                 key={skill}
@@ -93,7 +93,7 @@ export default function About() {
           </div>
         </div>
         <div className="about-reveal flex items-center justify-center">
-          <div className="relative flex justify-center">
+          <div className="relative flex -mb-6 justify-center">
             <div className="absolute h-full w-full rounded-full bg-[var(--color-secondary)] opacity-30 blur-[100px]" />
 
             <img
@@ -104,7 +104,7 @@ export default function About() {
           </div>
         </div>
       </div>
-      <div className="container mx-auto flex items-center justify-center">
+      <div className="container mx-auto flex items-center justify-center px-4">
         <div className="about-reveal grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 w-7xl  flex-col gap-4 self-start justify-center">
           {stats.map((stat) => (
             <div
