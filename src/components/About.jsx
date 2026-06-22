@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Code2, Sparkles, Users } from "lucide-react";
 import SectionDivider from "./SectionDivider";
+import aboutImage from "../assets/about-waqar.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -93,10 +94,10 @@ export default function About() {
         </div>
         <div className="about-reveal flex items-center justify-center">
           <div className="relative flex justify-center">
-            <div className="absolute h-72 w-72 rounded-full bg-cyan-500/15 blur-[100px]" />
+            <div className="absolute h-68 w-72 rounded-full bg-cyan-500/15 blur-[100px]" />
 
             <img
-              src="public/assets/about-waqar.png"
+              src={aboutImage}
               alt="Developer portrait"
               className="relative z-10 h-[500px] w-auto object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.35)] transition-transform duration-500 hover:-translate-y-2"
             />

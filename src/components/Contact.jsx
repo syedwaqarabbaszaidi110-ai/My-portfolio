@@ -111,16 +111,16 @@ export default function Contact() {
         {/* Quick contact info */}
         <div className="contact-reveal mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-6">
           <a
-            href="tel:+92XXXXXXXXXX"
-            className="flex items-center gap-2 text-sm text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
+            href="tel:+923708970508"
+            className="flex items-center gap-2 text-md text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
           >
-            <FaPhone size={16} />
-            +92 XXX XXXXXXX
+            <FaPhone size={16} className="rotate-95" />
+            +92 370 8970508
           </a>
 
           <a
             href="mailto:syedwaqarabbaszaidi110@gmail.com"
-            className="flex items-center gap-2 text-sm text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
+            className="flex items-center gap-2 text-md text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
           >
             <FaEnvelope size={16} />
             syedwaqarabbaszaidi110@gmail.com

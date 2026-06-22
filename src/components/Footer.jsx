@@ -1,5 +1,11 @@
-import logo from "../../public/assets/logo.png";
-import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from "react-icons/fa";
+import logo from "../assets/logo.png";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaInstagram,
+  FaEnvelope,
+  FaPhone,
+} from "react-icons/fa";
 
 const navLinks = [
   { name: "Home", href: "#hero" },
@@ -30,7 +36,11 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="mb-4 flex items-center gap-3">
-              <img src={logo} alt="Waqar Logo" className="h-15 w-auto" />
+              <span
+                className="relative p-2 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--color-primary)]/20 to-[var(--color-primary)]/5 ring-1 ring-[var(--color-primary)]/30"
+              >
+                <img src={logo} alt="Logo" className="h-4 w-auto" />
+              </span>
 
               <h3 className="font-display text-2xl font-bold">Waqar</h3>
             </div>
@@ -47,7 +57,7 @@ export default function Footer() {
               Quick Links
             </h4>
 
-            <ul className="space-y-3">
+            <ul className="space-y-3 mt-5">
               {navLinks.map((link) => (
                 <li key={link.name}>
                   <a
@@ -64,15 +74,31 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="mb-4 text-xl font-semibold uppercase tracking-wider">
+            <h4 className="text-xl font-semibold uppercase tracking-wider">
               Let's Connect
             </h4>
 
-            <p className="mb-5 text-sm text-[var(--color-text-muted)]">
+            <p className="my-5 text-sm text-[var(--color-text-muted)]">
               Have a project in mind? Let's create something amazing together.
             </p>
 
-            <div className="flex gap-4">
+            <div className="flex flex-col gap-4">
+              <a
+                href="mailto:syedwaqarabbaszaidi110@gmail.com"
+                className="rounded-full border flex gap-6 items-center justify-center border-[var(--color-border)] p-3 transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
+              >
+                <FaEnvelope />
+                <label>syedwaqarabbaszaidi110@gmail.com</label>
+              </a>
+              <a
+                href="tel:+923708970508"
+                className="rounded-full border flex gap-6 items-center justify-center border-[var(--color-border)] p-3 transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
+              >
+                <FaPhone size={16} className="rotate-95" />
+                <label>+92 370 8970508</label>
+              </a>
+            </div>
+            <div className="flex gap-6 mt-10">
               <a
                 href="https://github.com/yourusername"
                 target="_blank"
@@ -98,13 +124,6 @@ export default function Footer() {
                 className="rounded-full border border-[var(--color-border)] p-3 transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
               >
                 <FaInstagram />
-              </a>
-
-              <a
-                href="mailto:your@email.com"
-                className="rounded-full border border-[var(--color-border)] p-3 transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
-              >
-                <FaEnvelope />
               </a>
             </div>
           </div>

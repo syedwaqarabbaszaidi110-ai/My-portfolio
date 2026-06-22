@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Menu, X, MessageCircle } from "lucide-react";
 import gsap from "gsap";
 import ThemeToggle from "./ThemeToggle";
-import logo from "../../public/assets/logo.png";
+import logo from "../assets/logo.png";
 
 
 const navLinks = [
@@ -137,9 +137,9 @@ export default function Navbar() {
             ref={logoRef}
             onMouseEnter={() => handleLogoHover(true)}
             onMouseLeave={() => handleLogoHover(false)}
-            className="relative flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--color-primary)]/20 to-[var(--color-primary)]/5 ring-1 ring-[var(--color-primary)]/30"
+            className="relative p-2 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--color-primary)]/20 to-[var(--color-primary)]/5 ring-1 ring-[var(--color-primary)]/30"
           >
-            <img src={logo} alt="Logo" className="h-6 w-auto" />
+            <img src={logo} alt="Logo" className="h-4 w-auto" />
           </span>
           <span className="font-display text-xl font-bold tracking-tight text-[var(--color-text)]">
             Waqar<span className="text-[var(--color-primary)]">.</span>

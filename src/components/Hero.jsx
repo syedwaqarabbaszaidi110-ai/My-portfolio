@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ArrowRight, FileDown } from "lucide-react";
 import emailjs from "@emailjs/browser";
-import cv from "../../public/assets/cv.pdf";
+// import cv from "../../public/assets/cv.pdf";
 
 const EMAILJS_SERVICE_ID = "service_zce854n";
 const EMAILJS_TEMPLATE_ID = "template_sf7xw6c";
@@ -172,7 +172,7 @@ export default function Hero() {
             </a>
 
             <a
-              href={cv}
+              href="public/assets/Cv.pdf"
               download="Syed-Waqar-Abbas-CV.pdf"
               onClick={handleResumeDownload}
               className="hero-cta btn-ghost flex items-center gap-2"
