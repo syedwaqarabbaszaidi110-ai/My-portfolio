@@ -123,8 +123,8 @@ export default function Navbar() {
       }`}
     >
       <nav
-        className={`mx-auto flex container items-center justify-between  transition-all duration-500 ${
-          scrolled ? "h-20" : "h-30"
+        className={`mx-auto flex container items-center justify-between px-4 sm:px-6 transition-all duration-500 ${
+          scrolled ? "h-16 sm:h-20" : "h-20 sm:h-30"
         }`}
       >
         {/* Logo */}
@@ -137,11 +137,11 @@ export default function Navbar() {
             ref={logoRef}
             onMouseEnter={() => handleLogoHover(true)}
             onMouseLeave={() => handleLogoHover(false)}
-            className="relative p-2 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--color-primary)]/20 to-[var(--color-primary)]/5 ring-1 ring-[var(--color-primary)]/30"
+            className="relative p-1.5 flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-[var(--color-primary)]/20 to-[var(--color-primary)]/5 ring-1 ring-[var(--color-primary)]/30 sm:h-12 sm:w-12 sm:p-2"
           >
-            <img src={logo} alt="Logo" className="h-4 w-auto" />
+            <img src={logo} alt="Logo" className="h-3.5 w-auto sm:h-4" />
           </span>
-          <span className="font-display text-xl font-bold tracking-tight text-[var(--color-text)]">
+          <span className="font-display text-lg font-bold tracking-tight text-[var(--color-text)] sm:text-xl">
             Waqar<span className="text-[var(--color-primary)]">.</span>
           </span>
         </Link>

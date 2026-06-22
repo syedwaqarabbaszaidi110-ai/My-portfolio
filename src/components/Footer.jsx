@@ -1,8 +1,5 @@
 import logo from "../assets/logo.png";
 import {
-  FaGithub,
-  FaLinkedin,
-  FaInstagram,
   FaEnvelope,
   FaPhone,
 } from "react-icons/fa";
@@ -30,9 +27,9 @@ export default function Footer() {
     <footer className="relative overflow-hidden border-t border-[var(--color-border)] bg-[var(--color-surface)]">
       {/* Background Glow */}{" "}
       <div className="absolute left-1/2 top-0 h-40 w-40 -translate-x-1/2 rounded-full bg-[var(--color-primary)]/10 blur-3xl" />
-      <div className="relative mx-auto max-w-7xl px-6 py-16">
+      <div className="relative mx-auto max-w-7xl px-4 py-12 sm:px-6 md:py-16">
         {/* Top Section */}
-        <div className="grid gap-12 md:grid-cols-3">
+        <div className="grid gap-10 sm:gap-12 md:grid-cols-3">
           {/* Brand */}
           <div>
             <div className="mb-4 flex items-center gap-3">
@@ -42,7 +39,7 @@ export default function Footer() {
                 <img src={logo} alt="Logo" className="h-4 w-auto" />
               </span>
 
-              <h3 className="font-display text-2xl font-bold">Waqar</h3>
+              <h3 className="font-display text-xl font-bold sm:text-2xl">Waqar</h3>
             </div>
 
             <p className="max-w-sm text-sm leading-relaxed text-[var(--color-text-muted)]">
@@ -53,17 +50,17 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="mb-4 text-xl font-semibold uppercase tracking-wider">
+            <h4 className="mb-4 text-lg font-semibold uppercase tracking-wider sm:text-xl">
               Quick Links
             </h4>
 
-            <ul className="space-y-3 mt-5">
+            <ul className="space-y-3 mt-4 sm:mt-5">
               {navLinks.map((link) => (
                 <li key={link.name}>
                   <a
                     href={link.href}
                     onClick={(e) => handleNavClick(e, link.href)}
-                    className="text-md text-[var(--color-text-muted)] transition hover:text-[var(--color-primary)]"
+                    className="text-sm text-[var(--color-text-muted)] transition hover:text-[var(--color-primary)] sm:text-md"
                   >
                     {link.name}
                   </a>
@@ -74,66 +71,38 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-xl font-semibold uppercase tracking-wider">
+            <h4 className="text-lg font-semibold uppercase tracking-wider sm:text-xl">
               Let's Connect
             </h4>
 
-            <p className="my-5 text-sm text-[var(--color-text-muted)]">
+            <p className="my-4 text-sm text-[var(--color-text-muted)] sm:my-5">
               Have a project in mind? Let's create something amazing together.
             </p>
 
             <div className="flex flex-col gap-4">
               <a
                 href="mailto:syedwaqarabbaszaidi110@gmail.com"
-                className="rounded-full border flex gap-6 items-center justify-center border-[var(--color-border)] p-3 transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
+                className="rounded-full border flex gap-3 items-center justify-center border-[var(--color-border)] p-3 text-sm transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] sm:gap-6"
               >
-                <FaEnvelope />
-                <label>syedwaqarabbaszaidi110@gmail.com</label>
+                <FaEnvelope className="flex-shrink-0" />
+                <label className="break-all sm:break-normal">syedwaqarabbaszaidi110@gmail.com</label>
               </a>
               <a
                 href="tel:+923708970508"
-                className="rounded-full border flex gap-6 items-center justify-center border-[var(--color-border)] p-3 transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
+                className="rounded-full border flex gap-3 items-center justify-center border-[var(--color-border)] p-3 text-sm transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] sm:gap-6"
               >
-                <FaPhone size={16} className="rotate-95" />
+                <FaPhone size={16} className="rotate-95 flex-shrink-0" />
                 <label>+92 370 8970508</label>
-              </a>
-            </div>
-            <div className="flex gap-6 mt-10">
-              <a
-                href="https://github.com/yourusername"
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-full border border-[var(--color-border)] p-3 transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
-              >
-                <FaGithub />
-              </a>
-
-              <a
-                href="https://linkedin.com/in/yourusername"
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-full border border-[var(--color-border)] p-3 transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
-              >
-                <FaLinkedin />
-              </a>
-
-              <a
-                href="https://instagram.com/yourusername"
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-full border border-[var(--color-border)] p-3 transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
-              >
-                <FaInstagram />
               </a>
             </div>
           </div>
         </div>
 
         {/* Divider */}
-        <div className="my-10 h-px bg-[var(--color-border)]" />
+        <div className="my-8 h-px bg-[var(--color-border)] sm:my-10" />
 
         {/* Bottom */}
-        <div className="flex flex-col items-center justify-between gap-3 text-sm text-[var(--color-text-muted)] md:flex-row">
+        <div className="flex flex-col items-center justify-between gap-3 text-center text-xs text-[var(--color-text-muted)] sm:text-sm md:flex-row md:text-left">
           <p>© {new Date().getFullYear()} Waqar. All rights reserved.</p>
 
           <p>Made with using React & Tailwind CSS</p>

@@ -114,7 +114,7 @@ export default function Hero() {
     <section
       id="hero"
       ref={root}
-      className="relative flex min-h-[95vh] items-center overflow-hidden px-6"
+      className="relative flex lg:min-h-[95vh] md:min-h-[700px] sm:min-h-[600px] items-center px-4"
     >
       {/* Floating Blobs */}
       <div className="blob blob-1 h-80 w-80 bg-[var(--color-primary)] opacity-40" />
@@ -135,7 +135,7 @@ export default function Hero() {
             Website Developer
           </p>
 
-          <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
+          <h1 className="font-display text-3xl font-bold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl">
             <span className="hero-line block text-[var(--color-text)]">
               Hi, I'm  Waqar Abbas —
             </span>

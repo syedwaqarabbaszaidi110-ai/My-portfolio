@@ -19,49 +19,49 @@ const projects = [
   {
     id: 1,
     platform: "Shopify",
-    image: "src/assets/project/shopify/s1.png",
+    image: "src/assets/project/shopify/s1.webp",
   },
   {
     id: 2,
     platform: "Shopify",
-    image: "src/assets/project/shopify/s2.png",
+    image: "src/assets/project/shopify/s2.webp",
   },
   {
     id: 3,
     platform: "Shopify",
-    image:"src/assets/project/shopify/s3.png" ,
+    image: "src/assets/project/shopify/s3.webp",
   },
   {
     id: 4,
     platform: "Shopify",
-    image: "src/assets/project/shopify/s4.png",
+    image: "src/assets/project/shopify/s4.webp",
   },
   {
     id: 5,
     platform: "Shopify",
-    image:"src/assets/project/shopify/s5.jpg" ,
+    image: "src/assets/project/shopify/s5.webp",
   },
   {
     id: 6,
     platform: "Shopify",
-    image: "src/assets/project/shopify/s6.jpg",
+    image: "src/assets/project/shopify/s6.webp",
   },
   {
     id: 7,
     platform: "Shopify",
-    image: "src/assets/project/shopify/s7.png",
+    image: "src/assets/project/shopify/s7.webp",
   },
   {
     id: 8,
     platform: "Shopify",
-    image:"src/assets/project/shopify/s8.png" ,
+    image: "src/assets/project/shopify/s8.webp",
   },
 
   // Elementor
   {
     id: 9,
     platform: "Elementor",
-    image: "src/assets/project/elementor/e1.png",
+    image: "src/assets/project/elementor/e1.webp",
   },
   {
     id: 10,
@@ -71,12 +71,12 @@ const projects = [
   {
     id: 11,
     platform: "Elementor",
-    image: "src/assets/project/elementor/e3.png",
+    image: "src/assets/project/elementor/e3.webp",
   },
   {
     id: 12,
     platform: "Elementor",
-    image: "src/assets/project/elementor/e2.png",
+    image: "src/assets/project/elementor/e2.webp",
   },
 
   // GHL
@@ -90,22 +90,22 @@ const projects = [
   {
     id: 14,
     platform: "Wix",
-    image: "src/assets/project/wix/wix1.png",
+    image: "src/assets/project/wix/wix1.webp",
   },
   {
     id: 15,
     platform: "Wix",
-    image: "src/assets/project/wix/wix2.png",
+    image: "src/assets/project/wix/wix2.webp",
   },
   {
     id: 16,
     platform: "Wix",
-    image: "src/assets/project/wix/wix3.png",
+    image: "src/assets/project/wix/wix3.webp",
   },
   {
     id: 17,
     platform: "Wix",
-    image: "src/assets/project/wix/wix4.png",
+    image: "src/assets/project/wix/wix4.webp",
   },
 
   // Custom WordPress
@@ -120,7 +120,13 @@ const projects = [
 function Lightbox({ project, onClose }) {
   const [scale, setScale] = useState(1);
   const [pos, setPos] = useState({ x: 0, y: 0 });
-  const dragRef = useRef({ dragging: false, startX: 0, startY: 0, origX: 0, origY: 0 });
+  const dragRef = useRef({
+    dragging: false,
+    startX: 0,
+    startY: 0,
+    origX: 0,
+    origY: 0,
+  });
   const imgWrapRef = useRef(null);
 
   const MIN_SCALE = 1;
@@ -211,12 +217,12 @@ function Lightbox({ project, onClose }) {
     gsap.fromTo(
       ".lightbox-backdrop",
       { opacity: 0 },
-      { opacity: 1, duration: 0.3, ease: "power2.out" }
+      { opacity: 1, duration: 0.3, ease: "power2.out" },
     );
     gsap.fromTo(
       ".lightbox-content",
       { opacity: 0, scale: 0.85 },
-      { opacity: 1, scale: 1, duration: 0.4, ease: "power3.out" }
+      { opacity: 1, scale: 1, duration: 0.4, ease: "power3.out" },
     );
   }, []);
 
@@ -243,7 +249,13 @@ function Lightbox({ project, onClose }) {
           aria-label="Close"
           className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/40 text-white backdrop-blur-xl transition-colors hover:bg-white/20"
         >
-          <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
+          <svg
+            viewBox="0 0 24 24"
+            className="h-5 w-5"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
             <path d="M18 6L6 18M6 6l12 12" strokeLinecap="round" />
           </svg>
         </button>
@@ -265,7 +277,9 @@ function Lightbox({ project, onClose }) {
           style={{
             transform: `translate(${pos.x}px, ${pos.y}px) scale(${scale})`,
             cursor: scale === 1 ? "zoom-in" : "grab",
-            transition: dragRef.current.dragging ? "none" : "transform 0.2s ease-out",
+            transition: dragRef.current.dragging
+              ? "none"
+              : "transform 0.2s ease-out",
           }}
           className="max-h-full max-w-full select-none rounded-xl object-contain shadow-2xl"
         />
@@ -282,7 +296,13 @@ function Lightbox({ project, onClose }) {
           aria-label="Zoom out"
           className="flex h-9 w-9 items-center justify-center rounded-full text-white transition-colors hover:bg-white/15 disabled:opacity-30"
         >
-          <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
+          <svg
+            viewBox="0 0 24 24"
+            className="h-5 w-5"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
             <circle cx="11" cy="11" r="7" />
             <path d="M21 21l-4.3-4.3M8 11h6" strokeLinecap="round" />
           </svg>
@@ -301,7 +321,13 @@ function Lightbox({ project, onClose }) {
           aria-label="Zoom in"
           className="flex h-9 w-9 items-center justify-center rounded-full text-white transition-colors hover:bg-white/15 disabled:opacity-30"
         >
-          <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="2">
+          <svg
+            viewBox="0 0 24 24"
+            className="h-5 w-5"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          >
             <circle cx="11" cy="11" r="7" />
             <path d="M21 21l-4.3-4.3M11 8v6M8 11h6" strokeLinecap="round" />
           </svg>
@@ -388,16 +414,12 @@ export default function Projects() {
   };
 
   return (
-    <section
-      id="projects"
-      ref={root}
-      className="relative overflow-hidden px-6 py-32"
-    >
+    <section id="projects" ref={root} className="relative overflow-hidden py-12 md:py-24 lg:py-32">
       {" "}
-      <SectionDivider />
+      <SectionDivider  className="mt-10"/>
       {/* Background Glow */}
       <div className="absolute left-1/2 top-32 h-96 w-96 -translate-x-1/2 rounded-full bg-[var(--color-primary)]/10 blur-[140px]" />
-      <div className="relative mx-auto mt-16 max-w-7xl">
+      <div className="relative mx-auto mt-16 container px-4 ">
         <p className="eyebrow mb-5">Projects</p>
 
         <h2 className="font-display text-4xl font-bold md:text-6xl">
@@ -410,12 +432,12 @@ export default function Projects() {
         </p>
 
         {/* Filters */}
-        <div className="mt-10 flex flex-wrap gap-3">
+        <div className="mt-4 sm:mt-6 md:mt-8  flex flex-wrap gap-3">
           {PLATFORMS.map((platform) => (
             <button
               key={platform}
               onClick={() => setActiveFilter(platform)}
-              className={`rounded-full border px-5 py-2 text-sm transition-all duration-300 ${
+              className={`rounded-full border px-3 sm:px-4 md:px-5 py-2 text-xs sm:text-sm transition-all duration-300
                 activeFilter === platform
                   ? "border-[var(--color-primary)] bg-[var(--color-primary)]/10 text-[var(--color-text)]"
                   : "border-[var(--color-border)] text-[var(--color-text-muted)] hover:border-[var(--color-primary)]"
@@ -427,14 +449,14 @@ export default function Projects() {
         </div>
 
         {/* Projects Grid */}
-        <div className="mt-14 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+        <div className="mt-8 sm:mt-10 md:mt-12  lg:mt-14 grid gap-3 lg:gap-8 md:grid-cols-2 xl:grid-cols-3">
           {filteredProjects.map((project) => (
             <div
               key={project.id}
               onMouseMove={handleMouseMove}
               onMouseLeave={handleMouseLeave}
               onClick={() => setSelectedProject(project)}
-              className="project-card group relative h-[600px] cursor-pointer overflow-hidden rounded-[30px] border border-white/10 bg-black"
+              className="project-card group relative h-[400px] sm:h-[500px] md:h-[600px] cursor-pointer overflow-hidden rounded-[30px] border border-white/10 bg-black"
             >
               {/* Glow */}
               <div className="card-glow absolute left-1/2 top-1/2 h-52 w-52 -translate-x-1/2 -translate-y-1/2 rounded-full bg-white/10 blur-[90px]" />
@@ -481,7 +503,6 @@ export default function Projects() {
           </div>
         )}
       </div>
-
       {/* Lightbox */}
       {selectedProject && (
         <Lightbox
