@@ -2,6 +2,24 @@ import { useEffect, useRef, useState, useCallback } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SectionDivider from "./SectionDivider";
+import s1 from "../assets/s1.webp";
+import s2 from "../assets/s2.webp";
+import s3 from "../assets/s3.webp";
+import s4 from "../assets/s4.webp";
+import s5 from "../assets/s5.webp";
+import s6 from "../assets/s6.webp";
+import s7 from "../assets/s7.webp";
+import s8 from "../assets/s8.webp";
+import e1 from "../assets/e1.webp";
+import e2 from "../assets/e2.webp";
+import e3 from "../assets/e3.webp";
+import e4 from "../assets/e4.jpg";
+import wix1 from "../assets/wix1.webp";
+import wix2 from "../assets/wix2.webp";
+import wix3 from "../assets/wix3.webp";
+import wix4 from "../assets/wix4.webp";
+import w1 from "../assets/w1.webp";
+import ghl from "../assets/ghl.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,104 +34,32 @@ const PLATFORMS = [
 
 const projects = [
   // Shopify
-  {
-    id: 1,
-    platform: "Shopify",
-    image: "src/assets/s1.webp",
-  },
-  {
-    id: 2,
-    platform: "Shopify",
-    image: "src/assets/s2.webp",
-  },
-  {
-    id: 3,
-    platform: "Shopify",
-    image: "src/assets/s3.webp",
-  },
-  {
-    id: 4,
-    platform: "Shopify",
-    image: "src/assets/s4.webp",
-  },
-  {
-    id: 5,
-    platform: "Shopify",
-    image: "src/assets/s5.webp",
-  },
-  {
-    id: 6,
-    platform: "Shopify",
-    image: "src/assets/s6.webp",
-  },
-  {
-    id: 7,
-    platform: "Shopify",
-    image: "src/assets/s7.webp",
-  },
-  {
-    id: 8,
-    platform: "Shopify",
-    image: "src/assets/s8.webp",
-  },
+  { id: 1, platform: "Shopify", image: s1 },
+  { id: 2, platform: "Shopify", image: s2 },
+  { id: 3, platform: "Shopify", image: s3 },
+  { id: 4, platform: "Shopify", image: s4 },
+  { id: 5, platform: "Shopify", image: s5 },
+  { id: 6, platform: "Shopify", image: s6 },
+  { id: 7, platform: "Shopify", image: s7 },
+  { id: 8, platform: "Shopify", image: s8 },
 
   // Elementor
-  {
-    id: 9,
-    platform: "Elementor",
-    image: "src/assets/e1.webp",
-  },
-  {
-    id: 10,
-    platform: "Elementor",
-    image: "src/assets/e4.jpg",
-  },
-  {
-    id: 11,
-    platform: "Elementor",
-    image: "src/assets/e3.webp",
-  },
-  {
-    id: 12,
-    platform: "Elementor",
-    image: "src/assets/e2.webp",
-  },
+  { id: 9, platform: "Elementor", image: e1 },
+  { id: 10, platform: "Elementor", image: e4 },
+  { id: 11, platform: "Elementor", image: e3 },
+  { id: 12, platform: "Elementor", image: e2 },
 
   // GHL
-  {
-    id: 13,
-    platform: "GHL",
-    image: "src/assets/ghl.png",
-  },
+  { id: 13, platform: "GHL", image: ghl },
 
   // Wix
-  {
-    id: 14,
-    platform: "Wix",
-    image: "src/assets/wix1.webp",
-  },
-  {
-    id: 15,
-    platform: "Wix",
-    image: "src/assets/wix2.webp",
-  },
-  {
-    id: 16,
-    platform: "Wix",
-    image: "src/assets/wix3.webp",
-  },
-  {
-    id: 17,
-    platform: "Wix",
-    image: "src/assets/wix4.webp",
-  },
+  { id: 14, platform: "Wix", image: wix1 },
+  { id: 15, platform: "Wix", image: wix2 },
+  { id: 16, platform: "Wix", image: wix3 },
+  { id: 17, platform: "Wix", image: wix4 },
 
   // Custom WordPress
-  {
-    id: 18,
-    platform: "Custom WordPress",
-    image: "src/assets/w1.png",
-  },
+  { id: 18, platform: "Custom WordPress", image: w1 },
 ];
 
 /* ---------------- Lightbox Component ---------------- */
@@ -414,9 +360,13 @@ export default function Projects() {
   };
 
   return (
-    <section id="projects" ref={root} className="relative overflow-hidden py-12 md:py-24 lg:py-32">
+    <section
+      id="projects"
+      ref={root}
+      className="relative overflow-hidden py-12 md:py-24 lg:py-32"
+    >
       {" "}
-      <SectionDivider  className="mt-10"/>
+      <SectionDivider className="mt-10" />
       {/* Background Glow */}
       <div className="absolute left-1/2 top-32 h-96 w-96 -translate-x-1/2 rounded-full bg-[var(--color-primary)]/10 blur-[140px]" />
       <div className="relative mx-auto mt-16 container px-4 ">
