@@ -19,100 +19,100 @@ const projects = [
   {
     id: 1,
     platform: "Shopify",
-    image: "src/assets/project/shopify/s1.webp",
+    image: "src/assets/s1.webp",
   },
   {
     id: 2,
     platform: "Shopify",
-    image: "src/assets/project/shopify/s2.webp",
+    image: "src/assets/s2.webp",
   },
   {
     id: 3,
     platform: "Shopify",
-    image: "src/assets/project/shopify/s3.webp",
+    image: "src/assets/s3.webp",
   },
   {
     id: 4,
     platform: "Shopify",
-    image: "src/assets/project/shopify/s4.webp",
+    image: "src/assets/s4.webp",
   },
   {
     id: 5,
     platform: "Shopify",
-    image: "src/assets/project/shopify/s5.webp",
+    image: "src/assets/s5.webp",
   },
   {
     id: 6,
     platform: "Shopify",
-    image: "src/assets/project/shopify/s6.webp",
+    image: "src/assets/s6.webp",
   },
   {
     id: 7,
     platform: "Shopify",
-    image: "src/assets/project/shopify/s7.webp",
+    image: "src/assets/s7.webp",
   },
   {
     id: 8,
     platform: "Shopify",
-    image: "src/assets/project/shopify/s8.webp",
+    image: "src/assets/s8.webp",
   },
 
   // Elementor
   {
     id: 9,
     platform: "Elementor",
-    image: "src/assets/project/elementor/e1.webp",
+    image: "src/assets/e1.webp",
   },
   {
     id: 10,
     platform: "Elementor",
-    image: "src/assets/project/elementor/e4.jpg",
+    image: "src/assets/e4.jpg",
   },
   {
     id: 11,
     platform: "Elementor",
-    image: "src/assets/project/elementor/e3.webp",
+    image: "src/assets/e3.webp",
   },
   {
     id: 12,
     platform: "Elementor",
-    image: "src/assets/project/elementor/e2.webp",
+    image: "src/assets/e2.webp",
   },
 
   // GHL
   {
     id: 13,
     platform: "GHL",
-    image: "src/assets/project/ghl/ghl.png",
+    image: "src/assets/ghl.png",
   },
 
   // Wix
   {
     id: 14,
     platform: "Wix",
-    image: "src/assets/project/wix/wix1.webp",
+    image: "src/assets/wix1.webp",
   },
   {
     id: 15,
     platform: "Wix",
-    image: "src/assets/project/wix/wix2.webp",
+    image: "src/assets/wix2.webp",
   },
   {
     id: 16,
     platform: "Wix",
-    image: "src/assets/project/wix/wix3.webp",
+    image: "src/assets/wix3.webp",
   },
   {
     id: 17,
     platform: "Wix",
-    image: "src/assets/project/wix/wix4.webp",
+    image: "src/assets/wix4.webp",
   },
 
   // Custom WordPress
   {
     id: 18,
     platform: "Custom WordPress",
-    image: "src/assets/project/custom worpress/w1.png",
+    image: "src/assets/w1.png",
   },
 ];
 
