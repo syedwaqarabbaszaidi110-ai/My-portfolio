@@ -1,11 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 
-export default function Loader({ onFinish, name = "WAQAR" }) {
+export default function Loader({ onFinish, name = "" }) {
   const containerRef = useRef(null);
   const leftPanelRef = useRef(null);
   const rightPanelRef = useRef(null);
-  const nameRef = useRef(null);
   const lineRef = useRef(null);
   const [progress, setProgress] = useState(0);
 
@@ -22,7 +21,7 @@ export default function Loader({ onFinish, name = "WAQAR" }) {
     tl.fromTo(
       nameRef.current.querySelectorAll(".letter"),
       { opacity: 0, y: 20 },
-      { opacity: 1, y: 0, duration: 0.5, stagger: 0.05, ease: "power3.out" }
+      { opacity: 1, y: 0, duration: 0.5, stagger: 0.05, ease: "power3.out" },
     );
 
     // Progress bar fill + counter, running alongside the reveal
@@ -34,13 +33,13 @@ export default function Loader({ onFinish, name = "WAQAR" }) {
         ease: "power1.inOut",
         onUpdate: () => setProgress(Math.floor(counterObj.val)),
       },
-      "<0.2"
+      "<0.2",
     );
 
     tl.to(
       lineRef.current,
       { scaleX: 1, duration: 1.6, ease: "power1.inOut" },
-      "<"
+      "<",
     );
 
     // Tiny hold once it hits 100%
@@ -55,9 +54,20 @@ export default function Loader({ onFinish, name = "WAQAR" }) {
     tl.to(
       rightPanelRef.current,
       { xPercent: 100, duration: 0.9, ease: "power4.inOut" },
-      "<"
+      "<",
     );
     tl.to(containerRef.current, { autoAlpha: 0, duration: 0.3 }, "-=0.1");
+    tl.fromTo(
+      nameRef.current.querySelectorAll(".letter"),
+      { opacity: 0, y: 20 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        stagger: 0.05,
+        ease: "power3.out",
+      },
+    );
 
     return () => tl.kill();
   }, [onFinish]);
@@ -79,24 +89,19 @@ export default function Loader({ onFinish, name = "WAQAR" }) {
 
       {/* Center content */}
       <div className="relative z-10 flex flex-col items-center gap-6">
-        <div
-          ref={nameRef}
-          className="flex font-display text-4xl font-bold tracking-widest text-[var(--color-text)] md:text-5xl"
-        >
-          {name.split("").map((ch, i) => (
-            <span key={i} className="letter inline-block">
-              {ch}
-            </span>
-          ))}
+        {/* Spinner */}
+        <div className="relative h-16 w-16">
+          <div className="absolute inset-0 rounded-full border-4 border-[var(--color-border)]"></div>
+
+          <div className="absolute inset-0 rounded-full border-4 border-transparent border-t-[var(--color-primary)] animate-spin"></div>
         </div>
 
-        <div className="flex w-56 flex-col items-center gap-2">
-          <div className="h-[2px] w-full overflow-hidden rounded-full bg-[var(--color-border)]">
-            <div
-              ref={lineRef}
-              className="h-full w-full origin-left scale-x-0 bg-[var(--color-primary)]"
-            />
-          </div>
+        {/* Progress */}
+        <div className="flex flex-col items-center gap-2">
+          <span className="font-mono text-sm tracking-widest text-[var(--color-text-muted)]">
+            Loading...
+          </span>
+
           <span className="font-mono text-xs tracking-widest text-[var(--color-text-muted)]">
             {progress.toString().padStart(3, "0")}%
           </span>

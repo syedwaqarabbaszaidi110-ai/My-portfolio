@@ -174,7 +174,7 @@ export default function Navbar() {
           <button
             ref={ctaRef}
             onClick={handleWhatsAppClick}
-            className="group relative flex items-center gap-2 overflow-hidden rounded-full bg-[var(--color-primary)] px-5 py-2.5 text-sm font-semibold text-[var(--color-bg)] shadow-[0_8px_20px_-6px_var(--color-primary)] transition-transform duration-300 hover:-translate-y-0.5 hover:shadow-[0_12px_28px_-6px_var(--color-primary)]"
+            className="group relative flex items-center gap-2 overflow-hidden rounded-full bg-[var(--color-text)] px-5 py-2.5 text-sm font-semibold text-[var(--color-bg)] shadow-[0_8px_20px_-6px_var(--color-primary)] transition-transform duration-800 hover:-translate-y-0.5 hover:shadow-[0_12px_28px_-6px_var(--color-primary)]"
           >
             <MessageCircle size={16} className="relative z-10" />
             <span className="relative z-10">Contact Us</span>

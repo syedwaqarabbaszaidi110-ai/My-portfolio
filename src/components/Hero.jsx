@@ -4,9 +4,6 @@ import { ArrowRight, FileDown } from "lucide-react";
 import emailjs from "@emailjs/browser";
 import cv from "../../public/assets/cv.pdf";
 
-// 1) Sign up free at https://www.emailjs.com
-// 2) Create an Email Service + Email Template (template should use {{message}} variable)
-// 3) Paste your IDs below
 const EMAILJS_SERVICE_ID = "service_zce854n";
 const EMAILJS_TEMPLATE_ID = "template_sf7xw6c";
 const EMAILJS_PUBLIC_KEY = "_04W05urr7LAwVrw4";
@@ -133,7 +130,7 @@ export default function Hero() {
       {/* Wider Container */}
       <div className="relative z-10 mx-auto  container items-center gap-20 md:grid-cols-[1.3fr_1fr]">
         {/* LEFT CONTENT */}
-        <div className="max-w-5xl">
+        <div className="max-w-6xl">
           <p className="hero-eyebrow mb-6 text-sm tracking-[0.3em] text-[var(--color-text-muted)] uppercase">
             Website Developer
           </p>
@@ -150,7 +147,7 @@ export default function Hero() {
             </span>
           </h1>
 
-          <p className="hero-sub mt-7 max-w-lg text-lg leading-relaxed text-[var(--color-text-muted)]">
+          <p className="hero-sub mt-7 max-w-5xl text-lg leading-relaxed text-[var(--color-text-muted)]">
             I design and develop Shopify stores, WordPress websites, Wix &
             Framer landing pages, GoHighLevel funnels, Elementor builds, and
             modern React applications with clean UI and smooth animations.
