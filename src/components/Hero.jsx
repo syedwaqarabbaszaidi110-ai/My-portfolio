@@ -114,7 +114,7 @@ export default function Hero() {
     <section
       id="hero"
       ref={root}
-      className="relative flex lg:min-h-[95vh] md:min-h-[700px] sm:min-h-[600px] items-center px-4"
+      className="relative flex lg:min-h-[70vh] md:min-h-[700px] sm:min-h-[600px] items-center px-4"
     >
       {/* Floating Blobs */}
       <div className="blob blob-1 h-80 w-80 bg-[var(--color-primary)] opacity-40" />

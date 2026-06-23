@@ -120,13 +120,13 @@ export default function Contact() {
             </a>
 
             <a
-              href="mailto:syedwaqarabbaszaidi110@gmail.com"
+              href="mailto:dev-waqarabbas@outlook.com"
               className="flex items-center gap-2 text-md text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
             >
               <div className="w-12 h-12 rounded-full border border-[var(--color-border)] flex items-center justify-center">
                 <FaEnvelope size={16} />
               </div>
-              syedwaqarabbaszaidi110@gmail.com
+              dev-waqarabbas@outlook.com
             </a>
             {/* Social links */}
             <div className="contact-reveal mt-4 flex items-center gap-2">

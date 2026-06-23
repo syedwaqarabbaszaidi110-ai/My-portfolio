@@ -62,6 +62,8 @@ const projects = [
   { id: 18, platform: "Custom WordPress", image: w1 },
 ];
 
+const PAGE_SIZE = 8;
+
 /* ---------------- Lightbox Component ---------------- */
 function Lightbox({ project, onClose }) {
   const [scale, setScale] = useState(1);
@@ -288,11 +290,20 @@ export default function Projects() {
   const root = useRef(null);
   const [activeFilter, setActiveFilter] = useState("All");
   const [selectedProject, setSelectedProject] = useState(null);
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   const filteredProjects =
     activeFilter === "All"
       ? projects
       : projects.filter((project) => project.platform === activeFilter);
+
+  const visibleProjects = filteredProjects.slice(0, visibleCount);
+  const hasMore = visibleCount < filteredProjects.length;
+
+  // reset pagination whenever the filter changes
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+  }, [activeFilter]);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -310,7 +321,11 @@ export default function Projects() {
     }, root);
 
     return () => ctx.revert();
-  }, [activeFilter]);
+  }, [activeFilter, visibleCount]);
+
+  const handleViewMore = () => {
+    setVisibleCount((c) => Math.min(c + PAGE_SIZE, filteredProjects.length));
+  };
 
   const handleMouseMove = (e) => {
     const card = e.currentTarget;
@@ -365,6 +380,9 @@ export default function Projects() {
       ref={root}
       className="relative overflow-hidden py-12 md:py-24 lg:py-32"
     >
+       <div className="blob blob-2 left-0 top-auto bottom-40 leading-0 h-110 w-110 bg-[var(--color-primary)] opacity-40" />
+      <div className="blob blob-2 left-0 top-auto bottom-40 leading-0 h-110 w-110 bg-[var(--color-secondary)] opacity-5" />
+
       {" "}
       <SectionDivider className="mt-10" />
       {/* Background Glow */}
@@ -387,7 +405,7 @@ export default function Projects() {
             <button
               key={platform}
               onClick={() => setActiveFilter(platform)}
-              className={`rounded-full border px-3 sm:px-4 md:px-5 py-2 text-xs sm:text-sm transition-all duration-300
+              className={`rounded-full border px-3 sm:px-4 md:px-5 py-2 text-xs sm:text-sm transition-all duration-300 ${
                 activeFilter === platform
                   ? "border-[var(--color-primary)] bg-[var(--color-primary)]/10 text-[var(--color-text)]"
                   : "border-[var(--color-border)] text-[var(--color-text-muted)] hover:border-[var(--color-primary)]"
@@ -399,8 +417,8 @@ export default function Projects() {
         </div>
 
         {/* Projects Grid */}
-        <div className="mt-8 sm:mt-10 md:mt-12  lg:mt-14 grid gap-3 lg:gap-8 md:grid-cols-2 xl:grid-cols-3">
-          {filteredProjects.map((project) => (
+        <div className="mt-8 sm:mt-10 md:mt-12  lg:mt-14 grid gap-3 lg:gap-8 md:grid-cols-2 xl:grid-cols-4">
+          {visibleProjects.map((project) => (
             <div
               key={project.id}
               onMouseMove={handleMouseMove}
@@ -444,6 +462,18 @@ export default function Projects() {
             </div>
           ))}
         </div>
+
+        {/* View More */}
+        {hasMore && (
+          <div className="mt-10 flex justify-center">
+            <button
+              onClick={handleViewMore}
+              className="rounded-full cursor-pointer border border-[var(--color-border)] px-6 py-3 text-sm font-medium text-[var(--color-text)] transition-all duration-300 hover:border-[var(--color-primary)] hover:bg-[var(--color-primary)]/10"
+            >
+              View More
+            </button>
+          </div>
+        )}
 
         {filteredProjects.length === 0 && (
           <div className="mt-12 text-center">

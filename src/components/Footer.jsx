@@ -81,11 +81,11 @@ export default function Footer() {
 
             <div className="flex flex-col gap-4">
               <a
-                href="mailto:syedwaqarabbaszaidi110@gmail.com"
+                href="mailto:dev-waqarabbas@outlook.com"
                 className="rounded-full border flex gap-3 items-center justify-center border-[var(--color-border)] p-3 text-sm transition hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] sm:gap-6"
               >
                 <FaEnvelope className="flex-shrink-0" />
-                <label className="break-all sm:break-normal">syedwaqarabbaszaidi110@gmail.com</label>
+                <label className="break-all sm:break-normal">dev-waqarabbas@outlook.com</label>
               </a>
               <a
                 href="tel:+923708970508"

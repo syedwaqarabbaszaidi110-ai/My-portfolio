@@ -7,6 +7,7 @@
   --color-primary: #7c3aed;
   --color-primary-light: #a855f7;
   --color-secondary: #06b6d4;
+  --fade-color: #0a0a0f;
 
   --color-bg: #0a0e1a;
   --color-surface: #111624;
@@ -56,6 +57,7 @@
   --color-surface: #ffffff;
   --color-card: #ffffff;
   --color-card-hover: #f1f3fb;
+  --fade-color: #ffffff;
 
   --color-text: #0c1024;
   --color-text-muted: #5b6178;
@@ -114,4 +116,7 @@ a {
 ::-webkit-scrollbar-track { background: var(--color-taupe-800); }
 ::-webkit-scrollbar-thumb {
   background: var(--gradient-text);
+}
+.swiper-wrapper {
+  transition-timing-function: linear !important;
 }

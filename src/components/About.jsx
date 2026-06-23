@@ -93,7 +93,7 @@ export default function About() {
           </div>
         </div>
         <div className="about-reveal flex items-center justify-center">
-          <div className="relative flex -mb-6 justify-center">
+          <div className="relative flex -mb-14 justify-center">
             <div className="absolute h-full w-full rounded-full bg-[var(--color-secondary)] opacity-30 blur-[100px]" />
 
             <img
